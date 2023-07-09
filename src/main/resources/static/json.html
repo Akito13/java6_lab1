@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Concept</title>
+</head>
+<body>
+    <script>
+        let sv = {
+            "name": "Nguyễn Văn Tèo",
+            "gender": true,
+            "marks": 8.0,
+            "contact": {
+                "email": "tennv@gmail.com",
+                "phone": "0913745789"
+            },
+            "subjects": ["WEB205", "COM108"]
+        };
+        console.log(sv);
+        sv.name = sv.name.toUpperCase();
+        console.log(sv.name, sv.contact.email, sv.subjects[0]);
+        for(const key in sv) {
+            console.log(key, sv[key]);
+        }
+        const text = JSON.stringify(sv);
+        console.log(text);
+        const object = JSON.parse(text);
+        console.log(object);
+    </script>
+</body>
+</html>
